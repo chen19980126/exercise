@@ -1,4 +1,4 @@
-﻿昨日回顾：
+昨日回顾：
 	行业
 	阶段
 		基础
@@ -102,16 +102,15 @@
 	]# cd /root/.ssh/
 	]# cat id_rsa.pub
 		ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/p8VCyHSZhf/kHb45b3XaPT7hKDU9YkFF/22b9VLawnCPTfX8MZ9CjTlIvharZSYRFCM+eANsD2dZTfIapnuAS9WK56ii+wMmzxCvzwYh6nllbrB0t/xQartgJkvT2nAkRUpgR7Tq2h55ErwosLcEZZC3Xq1spLjwBZ4FKlInEQ6Ly3xEZC+2CdGsv9DgpP/yakgMov7rU1uUv6xzGwVVwP5OV3QsDLLuzFZfE1LNJSjuBe1KiTzpokrfcsBR6CFNOoW6oOAipsT5vGHwdTjVqN92zNYLuOPIW3cFcDUQKIpeK7S0d6zC0nLL4HQrRf50UDWtOVgkDRL1KD3PeGGB xxx@qq.com
-	
 	]# cd /opt
-	]# mkdir step01    # 创建仓库文件夹
+	]# mkdir step01
 	]# cd step01/
-	]# git init	   # 初始化仓库信息
-	]# vim README.md   # 创建仓库描述文件
+	]# rpm -qa git
+	]# git init
+	]# cat README.md
 		这是我云计算的第一个部分
-	]# git status	   # 查看仓库状态
-
-	]# git add README.md	# 将文件添加到本地仓库 [装车]
+	]# git status
+	]# git add README.md
 	]# git commit -m "这是我的第一个文件"
 	]# git config --global user.name "MX-Steve"
 	]# git config --global user.email "xxx@qq.com"
@@ -120,83 +119,21 @@
 	]# git remote rename origin old-origin
 	]# git remote add origin git@github.com:MX-Steve/nsd1903_step01.git
 	]# git push -u origin master
-排错：
-	注意：文件夹/远程的密钥名称/仓库名称都必须是英文，不能有空格，
-建错了可以删除重建，
-	如果提示无法读到远程仓库，执行以下命令
-	]# ssh-agent   ==》该命令返回三行代码，粘贴这三行代码在命令行上运行
-	然后再执行下面命令
-	]# git push -u origin master
-	提示有100%的代表成功
 	
-		
-===================================================================
-	cp : 复制
-	     cp  -r 源文件  目录  # 复制/拷贝
-	     cp /root/桌面/day01_all.txt     /opt/step01/preview/
-	     cd /opt/step01/preview
-	     ls
-	cd /opt/step01
-	git add .
-	git commit -m "随便写"
-	git push -u origin master
-		ssh-agent
-		git push -u origin master	
-	
-	mv : 移动
-		]# mv day01.txt /opt/
-		]# ls /opt
-
-	head : 看文件前几行
-		head -数字 a.txt
-	tail : 看文件结尾几行
-		tail -数字 a.txt
-	[root@A etc]# head -3 passwd
-		root:x:0:0:root:/root:/bin/bash
-		bin:x:1:1:bin:/bin:/sbin/nologin
-		daemon:x:2:2:daemon:/sbin:/sbin/nologin
-
-	[root@A etc]# tail -2 passwd
-		nsd07:x:1012:1014::/home/nsd07:/bin/bash
-		dockerroot:x:989:983:Docker User:/var/lib/docker:/sbin/nologin
-
-	|  : 管道 
-		命令1 | 命令2  ： 将前一个命令的结果传递给第二个命令做参数使用
-	
-	[root@room9pc01 opt]# head -5 passwd
-root:x:0:0:root:/root:/bin/bash
-bin:x:1:1:bin:/bin:/sbin/nologin
-daemon:x:2:2:daemon:/sbin:/sbin/nologin
-adm:x:3:4:adm:/var/adm:/sbin/nologin
-lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
-
-	[root@room9pc01 opt]# head -5 passwd | tail -3 
-
-daemon:x:2:2:daemon:/sbin:/sbin/nologin
-adm:x:3:4:adm:/var/adm:/sbin/nologin
-lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
-
-	[root@room9pc01 opt]# tail -5 passwd | head -3 
-
-tcpdump:x:72:72::/:/sbin/nologin
-apache:x:48:48:Apache:/usr/share/httpd:/sbin/nologin
-named:x:25:25:Named:/var/named:/sbin/nologin
-
-	]# ifconfig  | head -2 | tail -1
-	]# echo 123456  >  a.txt   # 会覆盖原来的内容
-	]# echo 123456 >> a.txt	   # 追加写入到文件中
-
+	ssh-agent  初始化			
 		
 		
 		
 		
-练习：
-	1. 一个文件一共有10行，看文件第7至9行		
-	2. 查看本机ip地址，把第二行[带ip]内容存入到自己仓库的
-		preview文件夹里，叫做ip.txt	
-	3. 将/etc/yum.repos.d/CentOS.repo拷贝到自己的仓库目录下，
-		将其改名为 dvd.repo
-	4.将仓库里的内容上传到远程仓库
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
