@@ -111,13 +111,16 @@
 		这是我云计算的第一个部分
 	]# git status	   # 查看仓库状态
 
-	]# git add README.md	# 将文件添加到本地仓库 [装车]
+	]# git add . # 将文件添加到本地仓库 [装车]
 	]# git commit -m "这是我的第一个文件"
 	]# git config --global user.name "MX-Steve"
 	]# git config --global user.email "xxx@qq.com"
 	]# git commit -m "这是我的第一个文件"
 	
 	]# git remote rename origin old-origin
+	]# git remote remove old-origin
+	]# git remote
+	origin
 	]# git remote add origin git@github.com:MX-Steve/nsd1903_step01.git
 	]# git push -u origin master
 排错：
@@ -146,7 +149,8 @@
 	mv : 移动
 		]# mv day01.txt /opt/
 		]# ls /opt
-
+	cat : 看完整文件
+		cat -n a.txt : 内容加上行号
 	head : 看文件前几行
 		head -数字 a.txt
 	tail : 看文件结尾几行
@@ -182,12 +186,17 @@ tcpdump:x:72:72::/:/sbin/nologin
 apache:x:48:48:Apache:/usr/share/httpd:/sbin/nologin
 named:x:25:25:Named:/var/named:/sbin/nologin
 
-	]# ifconfig  | head -2 | tail -1
+	]# ifconfig  | head -2  | tail -1
 	]# echo 123456  >  a.txt   # 会覆盖原来的内容
 	]# echo 123456 >> a.txt	   # 追加写入到文件中
 
 		
+	mv 老的文件名   新的文件名
+		cp /etc/yum.repos.d/CentOS.repo /opt/step01/dvd.repo
 		
+		cp /etc/yum.repos.d/CentOS.repo /opt/step01/
+		cd /opt/step01
+		mv CentOS.repo dvd.repo
 		
 		
 练习：
@@ -197,6 +206,15 @@ named:x:25:25:Named:/var/named:/sbin/nologin
 	3. 将/etc/yum.repos.d/CentOS.repo拷贝到自己的仓库目录下，
 		将其改名为 dvd.repo
 	4.将仓库里的内容上传到远程仓库
+
+
+
+
+
+
+
+
+
 		
 		
 		
